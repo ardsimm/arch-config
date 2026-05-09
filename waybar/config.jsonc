@@ -3,7 +3,7 @@
     "position": "top",
     "modules-left": ["hyprland/workspaces"],
     "modules-center": ["clock"],
-    "modules-right": ["pulseaudio", "network", "bluetooth", "battery", "custom/power-profile", "custom/clipboard", "custom/settings", "custom/lock"],
+    "modules-right": ["pulseaudio", "network", "bluetooth", "battery", "custom/power-profile", "custom/clipboard", "custom/settings", "custom/lock", "custom/power"],
 
     "hyprland/workspaces": {
         "format": "{icon}",
@@ -76,5 +76,11 @@
         "on-click": "hyprlock",
         "tooltip": true,
         "tooltip-format": "SUPER+L to lock"
+    },
+
+    "custom/power": {
+        "format": " ⏻ ",
+        "on-click": "~/.config/waybar/power-menu.sh",
+        "tooltip": false
     }
 }
