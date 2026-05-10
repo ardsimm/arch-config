@@ -2,8 +2,19 @@
     "layer": "top",
     "position": "top",
     "modules-left": ["hyprland/workspaces"],
-    "modules-center": ["clock"],
-    "modules-right": ["pulseaudio", "network", "bluetooth", "battery", "custom/power-profile", "custom/clipboard", "custom/settings", "custom/lock", "custom/power"],
+    "modules-center": ["custom/weather", "clock"],
+    "modules-right": [
+        "pulseaudio",
+        "network",
+        "bluetooth",
+        "battery",
+        "custom/power-profile",
+        "backlight",
+        "custom/clipboard",
+        "custom/settings",
+        "custom/lock",
+        "custom/power"
+    ],
 
     "hyprland/workspaces": {
         "format": "{icon}",
@@ -52,7 +63,7 @@
     "custom/power-profile": {
         "exec": "powerprofilesctl get",
         "interval": 5,
-        "format": "⚡ {}",
+        "format": " ⚡ {} ",
         "on-click": "powerprofilesctl set $(powerprofilesctl list | grep -v '*' | grep -oP '(?<=  )[a-z-]+' | wofi --dmenu)",
         "tooltip": false
     },
@@ -82,5 +93,20 @@
         "format": " ⏻ ",
         "on-click": "~/.config/waybar/power-menu.sh",
         "tooltip": false
+    },
+  
+    "backlight": {
+        "format": " {icon} {percent}% ",
+        "format-icons": ["󰃞", "󰃟", "󰃠"],
+        "tooltip": false
+    },
+
+    "custom/weather": {
+        "format": "{}",
+        "tooltip": true,
+        "return-type": "json",
+        "exec": "~/.config/waybar/scripts/weather/get_weather.rb",
+        "on-click": "~/.config/waybar/scripts/weather/get_weather.rb --next", // Cycle views
+        "interval": 900 // Every 15 minutes
     }
 }
