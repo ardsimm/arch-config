@@ -1069,8 +1069,8 @@ module TooltipBuilder
     def build_waybar_status(cond:, temp:, code:, is_day:, icon_pos:, fallback_icon:)
       cond_icon_raw = Icons.weather_icon(code, is_day != 0) || fallback_icon
       waybar_icon = Icons.style_icon(cond_icon_raw, Icons.weather_color(code, is_day != 0), Config.pongo_size[:small])
-      left = "#{waybar_icon}#{temp.round}#{Config.unit}"
-      right = "#{temp.round}#{Config.unit} #{waybar_icon}"
+      left = "#{waybar_icon} #{temp.round}#{Config.unit}"
+      right = "#{temp.round} #{Config.unit} #{waybar_icon}"
       (icon_pos || 'left') == 'left' ? left : right
     end
 
