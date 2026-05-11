@@ -1,51 +1,62 @@
 * {
-    font-family: JetBrainsMono Nerd Font;
-    font-size: 13px;
+  font-family: JetBrainsMono Nerd Font;
+  font-size: 13px;
 }
 
 window#waybar {
-    background: transparent;
+  background: transparent;
 }
 
-.modules-left, .modules-center, .modules-right {
-    background: rgba(40, 40, 40, 0.85);
-    border-radius: 12px;
-    padding: 4px;
-    margin: 8px 4px 0px 4px;
+.modules-left,
+.modules-center,
+.modules-right {
+  background: rgba(40, 40, 40, 0.85);
+  border-radius: 12px;
+  padding: 4px;
+  margin: 8px 4px 0px 4px;
 }
 
 #workspaces button {
-    color: #a89984;
-    padding: 0 6px;
-    border-radius: 8px;
+  color: #a89984;
+  padding: 0 6px;
+  border-radius: 8px;
 }
 
 #workspaces button.active {
-    color: #ebdbb2;
-    background: rgba(214, 93, 14, 0.4);
+  color: #ebdbb2;
+  background: rgba(214, 93, 14, 0.4);
 }
 
 #clock {
-    color: #ebdbb2;
-    padding: 0 12px;
+  color: #ebdbb2;
+  padding: 0 12px;
 }
 
 #pulseaudio {
-    color: #d79921;
-    padding: 0 10px;
+  color: #d79921;
+  padding: 0 10px;
 }
 
 #bluetooth {
-    color: #527ecf;
-    padding: 0 10px;
+  color: #527ecf;
+  padding: 0 10px;
 }
 
 #network {
-    color: #8ec07c;
-    padding: 0 10px;
+  color: #8ec07c;
+  padding: 0 10px;
 }
 
 #battery {
-    color: #b8bb26;
-    padding: 0 10px;
+  color: #b8bb26;
+  padding: 0 10px;
+}
+
+#custom-mic {
+  color: #98971a;
+  padding: 0 8px;
+}
+
+#custom-mic.muted {
+  color: #cc241d;
 }

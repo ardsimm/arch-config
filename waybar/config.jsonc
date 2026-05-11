@@ -1,10 +1,16 @@
 {
     "layer": "top",
     "position": "top",
-    "modules-left": ["hyprland/workspaces"],
-    "modules-center": ["custom/weather", "clock"],
+    "modules-left": [
+        "hyprland/workspaces"
+    ],
+    "modules-center": [
+        "custom/weather",
+        "clock"
+    ],
     "modules-right": [
         "pulseaudio",
+        "custom/mic",
         "network",
         "bluetooth",
         "battery",
@@ -15,16 +21,13 @@
         "custom/lock",
         "custom/power"
     ],
-
     "hyprland/workspaces": {
         "format": "{icon}",
         "on-click": "activate"
     },
-
     "clock": {
         "format": "{:%H:%M  %d/%m/%Y}"
     },
-
     "pulseaudio": {
         "format": "󰕾 {volume}%",
         "format-muted": "󰖁 muted",
@@ -32,7 +35,6 @@
         "tooltip": true,
         "tooltip-format": "SUPER+A to open pavucontrol"
     },
-
     "network": {
         "format-wifi": "󰤨  {essid}",
         "format-disconnected": "󰤭 disconnected",
@@ -40,7 +42,6 @@
         "tooltip": true,
         "tooltip-format": "Networl: {essid}\nClick to handle connections"
     },
-
     "bluetooth": {
         "format": "󰂯",
         "format-connected": "󰂱 {device_alias}",
@@ -51,15 +52,24 @@
         "tooltip": true,
         "tooltip-format": "{controller_alias}\n{num_connections} connected"
     },
-    
     "battery": {
         "format": "{icon} {capacity}%",
         "format-charging": "{icon} {capacity}%",
-        "format-icons": ["󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"],
+        "format-icons": [
+            "󰁺",
+            "󰁻",
+            "󰁼",
+            "󰁽",
+            "󰁾",
+            "󰁿",
+            "󰂀",
+            "󰂁",
+            "󰂂",
+            "󰁹"
+        ],
         "tooltip": true,
         "tooltip-format": "{timeTo}"
     },
-
     "custom/power-profile": {
         "exec": "powerprofilesctl get",
         "interval": 5,
@@ -67,40 +77,38 @@
         "on-click": "powerprofilesctl set $(powerprofilesctl list | grep -v '*' | grep -oP '(?<=  )[a-z-]+' | wofi --dmenu)",
         "tooltip": false
     },
-
     "custom/clipboard": {
         "format": " 󰅇 ",
         "on-click": "cliphist list | wofi --dmenu | cliphist decode | wl-copy",
         "tooltip": true,
         "tooltip-format": "SUPER+V to open history"
     },
-
     "custom/settings": {
         "format": " 󰒓 ",
         "on-click": "nwg-look",
         "tooltip": true,
         "tooltip-format": "Appearance settings"
     },
-
     "custom/lock": {
         "format": " 󰌾 ",
         "on-click": "hyprlock",
         "tooltip": true,
         "tooltip-format": "SUPER+L to lock"
     },
-
     "custom/power": {
         "format": " ⏻ ",
         "on-click": "~/.config/waybar/power-menu.sh",
         "tooltip": false
     },
-  
     "backlight": {
         "format": " {icon} {percent}% ",
-        "format-icons": ["󰃞", "󰃟", "󰃠"],
+        "format-icons": [
+            "󰃞",
+            "󰃟",
+            "󰃠"
+        ],
         "tooltip": false
     },
-
     "custom/weather": {
         "format": "{}",
         "tooltip": true,
@@ -108,5 +116,12 @@
         "exec": "~/.config/waybar/scripts/weather/get_weather.rb",
         "on-click": "~/.config/waybar/scripts/weather/get_weather.rb --next", // Cycle views
         "interval": 900 // Every 15 minutes
+    },
+    "custom/mic": {
+        "exec": "wpctl get-volume @DEFAULT_AUDIO_SOURCE@ | awk '{if ($3 == \"[MUTED]\") print \"󰍭\"; else print \"󰍬\"}'",
+        "interval": 1,
+        "format": "{}",
+        "tooltip": false,
+        "on-click": "wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle"
     }
 }
