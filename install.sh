@@ -70,7 +70,8 @@ sudo pacman -S --needed \
     zathura \
     zathura-pdf-mupdf \
     wev \
-    python-pip
+    python-pip \
+    noto-fonts-emoji \
 
 # =============================================================================
 # SERVICES
@@ -182,6 +183,9 @@ echo "📁 Creating directories..."
 mkdir -p ~/images/screenshots
 mkdir -p ~/images/welcome
 mkdir -p ~/images/wallpapers
+mkdir -p ~/images/wallpapers/gruvbox
+mkdir -p ~/images/wallpapers/gruvbox/light
+mkdir -p ~/images/wallpapers/gruvbox/dark
 mkdir -p ~/.config/hypr
 mkdir -p ~/.config/waybar
 mkdir -p ~/.config/kitty
@@ -199,7 +203,7 @@ echo "✅ Installation complete!"
 echo ""
 echo "⚠️  Don't forget to:"
 echo "   1. Copy your dotfiles to ~/.config/"
-echo "   2. Copy your wallpaper to ~/images/wallpapers/dark and ~/images/wallpapers/light"
+echo "   2. Copy your wallpaper to ~/images/wallpapers/gruvbox/dark and ~/images/wallpapers/gruvbox/light"
 echo "   3. Run 'p10k configure' after first zsh launch"
 echo "   4. Configure SDDM theme at /usr/share/sddm/themes/corners/theme.conf"
 echo "   5. Add LuaRocks path to ~/.config/nvim/init.lua"
