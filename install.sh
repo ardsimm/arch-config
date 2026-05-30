@@ -79,8 +79,21 @@ sudo pacman -S --needed \
     # Dev tools
     base-devel \
     git \
+    neovim \
     vim \
-    sudo
+    sudo \
+    # Media controls
+    playerctl \
+    # Git TUI
+    lazygit \
+    # Lua 5.1 (required for neovim plugins)
+    lua51 \
+    luarocks \
+    # PDF viewer
+    zathura \
+    zathura-pdf-mupdf \
+    # Wayland event debugger
+    wev
 
 # =============================================================================
 # SERVICES
@@ -161,6 +174,30 @@ systemctl --user enable pipewire-pulse
 systemctl --user enable wireplumber
 
 # =============================================================================
+# PYTHON PACKAGES
+# =============================================================================
+echo "🐍 Installing Python packages..."
+
+pip install c-formatter-42 --break-system-packages
+
+# =============================================================================
+# LUAROCKS PACKAGES
+# =============================================================================
+echo "🌙 Installing LuaRocks packages..."
+
+luarocks --local --lua-version 5.1 install magick
+
+# =============================================================================
+# RUST
+# =============================================================================
+echo "🦀 Installing Rust..."
+
+if ! command -v rustup &> /dev/null; then
+    curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
+    source "$HOME/.cargo/env"
+fi
+
+# =============================================================================
 # DIRECTORIES
 # =============================================================================
 echo "📁 Creating directories..."
@@ -177,13 +214,18 @@ mkdir -p ~/.config/gtk-3.0
 mkdir -p ~/.config/gtk-4.0
 mkdir -p ~/.config/zsh
 mkdir -p ~/.config/wireplumber/wireplumber.conf.d
+mkdir -p ~/.config/nvim/lua/config
+mkdir -p ~/.config/nvim/lua/plugins
 
 echo ""
 echo "✅ Installation complete!"
 echo ""
 echo "⚠️  Don't forget to:"
 echo "   1. Copy your dotfiles to ~/.config/"
-echo "   2. Copy your wallpaper to ~/images/wallpapers/"
+echo "   2. Copy your wallpaper to ~/images/wallpapers/dark and ~/images/wallpapers/light"
 echo "   3. Run 'p10k configure' after first zsh launch"
 echo "   4. Configure SDDM theme at /usr/share/sddm/themes/corners/theme.conf"
-echo "   5. Reboot!"
+echo "   5. Add LuaRocks path to ~/.config/nvim/init.lua"
+echo "   6. Launch nvim and run :Lazy sync to install plugins"
+echo "   7. Launch nvim and run :Mason to install LSP servers"
+echo "   8. Reboot!"
