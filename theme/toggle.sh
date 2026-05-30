@@ -202,7 +202,7 @@ fi
 # SLIDESHOW - restart with new wallpaper dir
 # =============================================================================
 pkill -f "slide_show.sh"
-bash ~/dev/scripts/awww/slide_show.sh "$WALLPAPER_DIR" 1 &
+bash ~/.config/theme/slide_show.sh "$WALLPAPER_DIR" 1 &
 
 # =============================================================================
 # STATE
