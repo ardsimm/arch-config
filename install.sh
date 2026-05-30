@@ -69,7 +69,8 @@ sudo pacman -S --needed \
     luarocks \
     zathura \
     zathura-pdf-mupdf \
-    wev
+    wev \
+    python-pip
 
 # =============================================================================
 # SERVICES
