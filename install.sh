@@ -78,6 +78,7 @@ echo "📦 Installing yay packages..."
 
 yay -S \
     gruvbox-plus-icon-theme \
+    beeper \
   
 
 # =============================================================================
