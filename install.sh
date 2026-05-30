@@ -14,54 +14,38 @@ echo "🚀 Starting installation..."
 echo "📦 Installing pacman packages..."
 
 sudo pacman -S --needed \
-    # Hyprland & display
     hyprland \
     xdg-desktop-portal-hyprland \
-    mesa \
     intel-media-driver \
     vulkan-intel \
     sddm \
-    # Terminal & shell
     kitty \
     zsh \
-    # Waybar & launcher
     waybar \
     wofi \
-    # Wallpaper
     awww \
-    # Notifications
     mako \
     libnotify \
-    # Screenshots
     grim \
     slurp \
-    # Clipboard
     cliphist \
     wl-clipboard \
-    # Lock screen
     hyprlock \
     hypridle \
-    # Audio
     pipewire \
     pipewire-pulse \
     pipewire-jack \
     wireplumber \
     sof-firmware \
     pavucontrol \
-    # Network
     networkmanager \
     network-manager-applet \
-    # Bluetooth
     bluez \
     bluez-utils \
     blueman \
-    # Power
     power-profiles-daemon \
-    # Brightness
     brightnessctl \
-    # GTK theme & appearance
     nwg-look \
-    # File manager
     yazi \
     ffmpegthumbnailer \
     jq \
@@ -72,27 +56,19 @@ sudo pacman -S --needed \
     zoxide \
     imagemagick \
     p7zip \
-    # Fonts
     noto-fonts \
-    # Terminal image viewer
     chafa \
-    # Dev tools
     base-devel \
     git \
     neovim \
     vim \
     sudo \
-    # Media controls
     playerctl \
-    # Git TUI
     lazygit \
-    # Lua 5.1 (required for neovim plugins)
     lua51 \
     luarocks \
-    # PDF viewer
     zathura \
     zathura-pdf-mupdf \
-    # Wayland event debugger
     wev
 
 # =============================================================================
