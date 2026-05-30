@@ -1,9 +1,10 @@
 if __name__ == "__main__":
     import getpass
 
+    animate = True
     user_name = getpass.getuser()
-    print(
-        """
+    i = 0
+    print("""\
                                   .
                           A       ;
                 |   ,--,-/ \\---,-/|  ,
@@ -28,7 +29,6 @@ if __name__ == "__main__":
                `|/-.      \\ /   \\ /,---`\\         Glub glub
                 /   `._____V_____V'
                            '     '
+        """)
+    print(f"Welcome back, {user_name}")
 
-        """
-    )
-    print(f"        Welcome back, {user_name}")
