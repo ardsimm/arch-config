@@ -104,6 +104,3 @@ alias pformat="black"
 alias cformat="c_formatter_42 **/*.c **/*.h"
 alias cnorm="norminette"
 alias vg="valgrind --leak-check=full -s --show-mismatched-frees=yes --track-origins=yes --show-leak-kinds=all"
-
-# ----- Overrides -----
-alias clear="clear && greet"
