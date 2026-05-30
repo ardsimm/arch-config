@@ -72,8 +72,13 @@ sudo pacman -S --needed \
     wev \
     python-pip \
     noto-fonts-emoji \
+    ruby \
 
-yay -S gruvbox-plus-icon-theme
+echo "📦 Installing yay packages..."
+
+yay -S \
+    gruvbox-plus-icon-theme \
+  
 
 # =============================================================================
 # SERVICES
