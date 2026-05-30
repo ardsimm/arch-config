@@ -10,7 +10,7 @@ window {
 }
 
 #input {
-    background-color: rgba(40, 40, 40, 0);
+    background-color: rgba(40, 40, 40, 0.85);
     color: #ebdbb2;
     border: none;
     border-bottom: 2px solid #d79921;
