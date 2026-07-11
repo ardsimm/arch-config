@@ -10,53 +10,53 @@ window#waybar {
 .modules-left,
 .modules-center,
 .modules-right {
-  background: rgba(40, 40, 40, 0.85);
+  background: rgba(251, 241, 199, 0.85);
   border-radius: 12px;
   padding: 4px;
   margin: 8px 4px 0px 4px;
 }
 
 #workspaces button {
-  color: #a89984;
+  color: #7c6f64;
   padding: 0 6px;
   border-radius: 8px;
 }
 
 #workspaces button.active {
-  color: #ebdbb2;
-  background: rgba(214, 93, 14, 0.4);
+  color: #3c3836;
+  background: rgba(175, 58, 3, 0.4);
 }
 
 #clock {
-  color: #ebdbb2;
+  color: #3c3836;
   padding: 0 12px;
 }
 
 #pulseaudio {
-  color: #d79921;
+  color: #b57614;
   padding: 0 10px;
 }
 
 #bluetooth {
-  color: #527ecf;
+  color: #076678;
   padding: 0 10px;
 }
 
 #network {
-  color: #8ec07c;
+  color: #427b58;
   padding: 0 10px;
 }
 
 #battery {
-  color: #b8bb26;
+  color: #79740e;
   padding: 0 10px;
 }
 
 #custom-mic {
-  color: #98971a;
+  color: #79740e;
   padding: 0 8px;
 }
 
 #custom-mic.muted {
-  color: #cc241d;
+  color: #9d0006;
 }
