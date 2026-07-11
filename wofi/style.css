@@ -4,16 +4,16 @@
 }
 
 window {
-    background-color: rgba(40, 40, 40, 0.85);
+    background-color: rgba(251, 241, 199, 0.85);
     border-radius: 12px;
-    border: 2px solid #d79921;
+    border: 2px solid #b57614;
 }
 
 #input {
-    background-color: rgba(40, 40, 40, 0.85);
-    color: #ebdbb2;
+    background-color: rgba(251, 241, 199, 0.85);
+    color: #3c3836;
     border: none;
-    border-bottom: 2px solid #d79921;
+    border-bottom: 2px solid #b57614;
     border-radius: 0;
     padding: 8px;
 }
@@ -28,13 +28,13 @@ window {
 }
 
 #entry:selected {
-    background-color: rgba(215, 153, 33, 0.3);
+    background-color: rgba(181, 118, 20, 0.3);
 }
 
 #text {
-    color: #ebdbb2;
+    color: #3c3836;
 }
 
 #text:selected {
-    color: #ebdbb2;
+    color: #3c3836;
 }
