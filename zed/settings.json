@@ -1,0 +1,49 @@
+{
+  "cli_default_open_behavior": "existing_window",
+  "tab_size": 4,
+  "hard_tabs": true,
+  "show_whitespaces": "boundary",
+  "remove_trailing_whitespace_on_save": true,
+  "ensure_final_newline_on_save": true,
+  "wrap_guides": [120],
+  "format_on_save": "off",
+  "autosave": { "after_delay": { "milliseconds": 1000 } },
+
+  "session": { "trust_all_worktrees": false },
+  "vim_mode": true,
+  "agent_servers": { "claude-acp": { "type": "registry" } },
+  "base_keymap": "VSCode",
+  "ui_font_size": 16,
+  "buffer_font_size": 15,
+  "theme": {
+    "mode": "system",
+    "light": "Gruvbox Light",
+    "dark": "Gruvbox Dark"
+  },
+
+  "languages": {
+    "C": {
+      "wrap_guides": [80],
+      "formatter": {
+        "external": {
+          "command": "c_formatter_42_stdin",
+          "arguments": []
+        }
+      }
+    },
+    "Python": {
+      "hard_tabs": false,
+      "tab_size": 4,
+      "wrap_guides": [80],
+      "formatter": {
+        "external": {
+          "command": "black",
+          "arguments": ["-l", "79", "-q", "-"]
+        }
+      }
+    },
+    "JSON": {
+      "formatter": "prettier"
+    }
+  }
+}
